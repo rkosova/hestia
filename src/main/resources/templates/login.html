@@ -7,19 +7,32 @@
     <title>Login</title>
 </head>
 <body>
-<div class="login">
+<div class="wrapper">
+    <div class="login">
 
-    <label>
-        <span>[</span>
-        <input class="login__input" type="email" required>
-        <span>]</span>
-    </label>
-    <label>
-        <span>[</span>
-        <input class="login__input" type="password" required>
-        <span>]</span>
-    </label>
-    <input class="login__submit pointer" type="submit">
+
+        <span>EMAIL:</span>
+        <label>
+            <span>[</span>
+            <input class="login__input" type="email" required>
+            <span>];</span>
+        </label>
+
+
+        <span>PASSWORD:</span>
+        <label>
+            <span>[</span>
+            <input class="login__input" type="password" required>
+            <span>];</span>
+        </label>
+
+        <div class="buttons">
+            <input class="login__submit pointer" type="submit" value="LOGIN">
+            <button class="login__submit pointer">REGISTER</button>
+            <button class="login__submit pointer">HOME</button>
+        </div>
+
+    </div>
 </div>
 </body>
 </html>

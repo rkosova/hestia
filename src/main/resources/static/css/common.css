@@ -1,6 +1,7 @@
- body {
+body {
     background-color: #201E1E;
      color: snow;
+     margin: 0;
 }
 
 .border--red {

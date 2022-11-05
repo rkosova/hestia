@@ -1,11 +1,14 @@
 .login {
     border: solid #EC4242 0.2rem;
     border-style: dashed;
-    min-width: 10rem;
+    min-width: 50%;
     min-height: 10rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 1rem;
+    color: #EC4242;
 }
 
 
@@ -21,6 +24,7 @@
     border: solid #EC4242 0.1rem ;
     color: #EC4242;
     padding: 0.1rem;
+    margin-right: 1rem;
 }
 
 .login__submit:hover {
@@ -31,4 +35,19 @@
 label {
     min-width: 80%;
     color: #EC4242;
+}
+
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
