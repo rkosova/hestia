@@ -1,10 +1,10 @@
 package com.hestia.app;
 
 import com.hestia.app.project.ProjectRepository;
+import com.hestia.app.skill.SkillRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,9 +12,11 @@ import javax.servlet.http.HttpSession;
 public class Pages {
 
     private final ProjectRepository projectRepository;
+    private final SkillRepository skillRepository;
 
-    public Pages(ProjectRepository projectRepository) {
+    public Pages(ProjectRepository projectRepository, SkillRepository skillRepository) {
         this.projectRepository = projectRepository;
+        this.skillRepository = skillRepository;
     }
 
 
@@ -44,5 +46,12 @@ public class Pages {
         return (String) session.getAttribute("user");
     }
 
+    @GetMapping("/new_project")
+    public String project(Model model, HttpSession session) {
+
+        if(session.getAttribute("user") == null){return "redirect:/login";}
+        model.addAttribute("skills", skillRepository.findAll());
+        return "newProject";
+    }
 
 }

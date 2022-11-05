@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link th:href="@{/css/loginRegister.css}" rel="stylesheet">
+    <link th:href="@{/css/form.css}" rel="stylesheet">
     <link th:href="@{/css/common.css}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
 <body>
 <div class="wrapper">
-    <form class="login" method="post" th:action="@{/api/v1/user/login}">
+    <form class="form" method="post" th:action="@{/api/v1/user/login}">
         <span>EMAIL:</span>
         <label>
             <span>[</span>
-            <input class="login__input" type="email" name="email" required>
+            <input class="form__input" type="email" name="email" required>
             <span>];</span>
         </label>
 
@@ -20,14 +20,14 @@
         <span>PASSWORD:</span>
         <label>
             <span>[</span>
-            <input class="login__input" type="password" name="password" required>
+            <input class="form__input" type="password" name="password" required>
             <span>];</span>
         </label>
 
         <div class="buttons">
-            <input class="login__submit pointer" type="submit" value="LOGIN">
-            <button class="login__submit pointer">REGISTER</button>
-            <button class="login__submit pointer">HOME</button>
+            <input class="form__submit pointer" type="submit" value="LOGIN">
+            <button class="form__submit pointer">REGISTER</button>
+            <button class="form__submit pointer">HOME</button>
         </div>
     </form>
 
