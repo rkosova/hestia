@@ -1,17 +1,5 @@
-html, body {
-    background-color: #313131;
-
-}
-
 .post {
     display: flex;
-}
-
-.post--border {
-    border: 0.5rem solid #B65518;
-    border-radius: 1rem;
-    margin: 2rem;
-    min-height: 30rem;
 }
 
 .post__visual {
@@ -19,13 +7,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    min-width: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .post__description {
     grid-area: two;
     min-width: 10rem;
+    padding: 1rem;
 }
 
 .post {
@@ -35,6 +24,7 @@ html, body {
 
 .visual__choice {
     display: flex;
+    align-content: space-evenly;
 }
 
 .visual__skills {

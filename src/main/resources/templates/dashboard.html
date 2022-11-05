@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <link th:href="@{/css/dashboard.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/common.css}" rel="stylesheet"></link>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<div>
+    <h1>PROJECTS</h1>
+</div>
 <div th:each="description: ${descriptions}">
-  <div th:replace="post"></div>
+    <div th:replace="post"></div>
 </div>
 
 </body>
