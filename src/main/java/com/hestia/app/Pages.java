@@ -22,9 +22,7 @@ public class Pages {
     public String dashboard(Model model, HttpSession session) {
 
         if(session.getAttribute("user") == null){return "redirect:/login";}
-
         model.addAttribute("projects", projectRepository.findAll());
-
         return "dashboard";
     }
 
