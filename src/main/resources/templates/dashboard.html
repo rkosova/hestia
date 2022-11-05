@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body th:include="post">
+<body>
+<div th:each="description: ${descriptions}">
+  <div th:replace="post"></div>
+</div>
 
 </body>
 </html>
