@@ -43,6 +43,9 @@ public class Pages {
 
         return (String) session.getAttribute("user");
     }
-
+    @GetMapping("/sendMail")
+    public String sendMail(){
+        return "mail";
+    }
 
 }
