@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * SERVICE LAYER
@@ -23,15 +24,20 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void addUser(User user) {
+    public void addUser(User user)throws Exception {
 
-        /*
-         * This is where the business logic for registering goes
-         */
-
+        if(user.getEmail() == null || user.getPassword() == null){
+            throw new Exception("Email or Password not provided");
+        }
         userRepository.save(user);
     }
-
+    public String login(User user){
+        Optional<User> authorized = userRepository.findAllByEmailAndPassword(user.getEmail(), user.getPassword());
+        if(!authorized.isEmpty()){
+            return "/dashboard";
+        }
+        return "/login";
+    }
     public void deleteUser(Long userId) {
         if (!userRepository.existsById(userId)) {
             throw new IllegalStateException("User with id " + userId + "does not exist");

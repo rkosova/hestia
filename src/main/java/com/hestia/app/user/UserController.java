@@ -2,6 +2,7 @@ package com.hestia.app.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -26,10 +27,14 @@ public class UserController {
     }
 
     @PostMapping
-    public void registerUser(@RequestBody User user) {
+    public void registerUser(@RequestBody User user)throws Exception {
         userService.addUser(user);
     }
-
+    @PostMapping("/login")
+    public RedirectView login(@ModelAttribute User user){
+        String option = userService.login(user);
+        return new RedirectView(option);
+    }
     @DeleteMapping(path = "{userId}")
     public void deleteUser(@PathVariable("userId") Long userId) {
         userService.deleteUser(userId);
