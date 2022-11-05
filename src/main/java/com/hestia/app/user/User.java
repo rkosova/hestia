@@ -1,5 +1,7 @@
 package com.hestia.app.user;
 
+import com.hestia.app.project.Project;
+
 import javax.persistence.*;
 
 @Entity
@@ -21,6 +23,7 @@ public class User {
     private String l_name;
     private String email;
     private String password;
+
 
     public User(Long id, String name, String l_name, String email, String password) {
         this.id = id;
