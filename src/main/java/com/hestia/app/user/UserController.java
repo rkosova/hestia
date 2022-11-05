@@ -26,8 +26,8 @@ public class UserController {
          return userService.getUsers();
     }
 
-    @PostMapping
-    public void registerUser(@RequestBody User user)throws Exception {
+    @PostMapping("/register")
+    public void registerUser(@ModelAttribute User user)throws Exception {
         userService.addUser(user);
     }
     @PostMapping("/login")

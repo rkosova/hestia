@@ -14,8 +14,8 @@ public class UserConfig {
             User ron = new User(
                     "Ron",
                     "Kosova",
-                    "ron.kosova@student.hamk.fi",
-                    "wowowowow"
+                    "ron@ron.com",
+                    "$2a$10$rjPFMs8KOo1fHLnCOQSEH.GLu4HZ8.zbEVpw.JaV9EPk7E..jlPZe"
             );
 
             User anika = new User(

@@ -1,9 +1,13 @@
 package com.hestia.app.user;
 
+import com.hestia.app.hash.Bcrypt;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -14,6 +18,7 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final Bcrypt bcrypt = new Bcrypt();
 
     @Autowired
     public UserService(UserRepository userRepository) {
@@ -25,6 +30,9 @@ public class UserService {
     }
 
     public void addUser(User user)throws Exception {
+        String password = user.getPassword();
+
+        user.setPassword(bcrypt.encoder().encode(password));
 
         if(user.getEmail() == null || user.getPassword() == null){
             throw new Exception("Email or Password not provided");
@@ -32,8 +40,10 @@ public class UserService {
         userRepository.save(user);
     }
     public String login(User user){
-        Optional<User> authorized = userRepository.findAllByEmailAndPassword(user.getEmail(), user.getPassword());
-        if(!authorized.isEmpty()){
+        Optional<User> authorized = userRepository.findAllByEmail(user.getEmail());
+        String password = authorized.get().getPassword();
+        boolean isPasswordMatch = bcrypt.encoder().matches(user.getPassword(), password);
+        if(!authorized.isEmpty() && isPasswordMatch){
             return "/dashboard";
         }
         return "/login";

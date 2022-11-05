@@ -8,26 +8,26 @@
 </head>
 <body>
 <div class="wrapper">
-  <form class="login">
+  <form class="login" method="post" th:action="@{/api/v1/user/register}">
 
     <span>FIRST NAME:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="email" required>
+      <input class="login__input" type="text" name="name" required>
       <span>];</span>
     </label>
 
     <span>LAST NAME:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="email" required>
+      <input class="login__input" type="text" name="l_name"required>
       <span>];</span>
     </label>
 
     <span>EMAIL:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="email" required>
+      <input class="login__input" type="email" name="email" required>
       <span>];</span>
     </label>
 
@@ -35,7 +35,7 @@
     <span>PASSWORD:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="password" required>
+      <input class="login__input" type="password" name="password" required>
       <span>];</span>
     </label>
     <span>CONFIRM PASSWORD:</span>
