@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    min-width: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .post__description {
@@ -24,6 +24,7 @@
 
 .visual__choice {
     display: flex;
+    align-content: space-evenly;
 }
 
 .visual__skills {

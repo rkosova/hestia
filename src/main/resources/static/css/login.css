@@ -1,0 +1,34 @@
+.login {
+    border: solid #EC4242 0.2rem;
+    border-style: dashed;
+    min-width: 10rem;
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login__input {
+    background-color: #201E1E;
+    color: #EC4242;
+    border: solid 0;
+    min-width: 90%;
+}
+
+.login__submit {
+    background-color: #201E1E;
+    border: solid #EC4242 0.1rem ;
+    color: #EC4242;
+    padding: 0.1rem;
+}
+
+.login__submit:hover {
+    color: #201E1E;
+    background-color: #EC4242;
+}
+
+label {
+    min-width: 80%;
+    color: #EC4242;
+}

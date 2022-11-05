@@ -17,3 +17,12 @@
     margin: 0.5rem;
     color: black;
 }
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.logo {
+    max-height: 8rem;
+    max-width: 6rem;
+}
