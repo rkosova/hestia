@@ -1,5 +1,7 @@
 package com.hestia.app.user;
 
+import com.hestia.app.mail.EmailDetails;
+import com.hestia.app.mail.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
@@ -32,6 +34,7 @@ public class UserController {
         String option = userService.addUser(user);
         return new RedirectView(option);
     }
+
     @PostMapping("/login")
     public RedirectView login(@ModelAttribute User user, HttpSession session){
         String option = userService.login(user, session);
