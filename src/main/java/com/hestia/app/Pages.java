@@ -5,13 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class GreetingController {
-
-    @GetMapping("/post")
-    public String post(Model model,String name) {
-        model.addAttribute("name",name);
-        return "post";
-    }
+public class Pages {
 
     @GetMapping("/dashboard")
     public String dashboard() {
