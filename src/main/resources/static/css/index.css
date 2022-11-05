@@ -59,9 +59,7 @@ h1 {
 
 .button__div {
     font-size: 15px;
-    border: solid #EC4242 0.2rem;
-    border-style: dashed;
-    color: #EC4242;
+    color: #E77117;
     text-align: center;
     box-sizing: inherit;
     padding-top: 2rem;
@@ -79,20 +77,21 @@ h1 {
     padding: 0.8rem 1.8rem;
     overflow: hidden;
     font-size: 24px;
-    color: #EC4242;
+    color: #E77117;
     background-color: #201E1E;
     font-weight: 900;
 }
 
 .post--border--small {
-    border: 0.2rem dashed #EC4242;
+    border: 0.2rem solid #E77117;
     border-radius: 1rem;
 }
 
 .post--border--medium {
-    border: 0.5rem dashed #EC4242;
+    border: 0.5rem solid #EC4242;
     border-radius: 1rem;
 }
+
 .row {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
@@ -105,13 +104,15 @@ h1 {
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+
 .section__cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 6rem;
     margin-bottom: 8rem;
-    }
+}
 
 .card {
     font-family: "Montserrat", sans-serif;
@@ -122,6 +123,7 @@ h1 {
     width: 22%;
     margin: 1rem;
     padding: 0rem 1rem;
+    min-width: 15rem;
 }
 
 .card__third {
@@ -151,18 +153,21 @@ h1 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
+
 .customers__main {
     font-size: 2rem;
 }
+
 .triangle {
     margin: auto;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 40rem solid transparent;
     border-right: 40rem solid transparent;
     border-top: 10rem solid #201E1E;
     margin-bottom: 5rem;
 }
+
 .group__logo {
     -webkit-text-size-adjust: 100%;
     font-size: 15px;
@@ -170,8 +175,9 @@ h1 {
     color: snow;
     line-height: 1.8;
     box-sizing: inherit;
-    letter-spacing: 10px;   
+    letter-spacing: 10px;
 }
+
 .group {
     -webkit-text-size-adjust: 100%;
     font-size: 15px;
@@ -181,6 +187,7 @@ h1 {
     color: snow;
     background-color: snow;
 }
+
 .group__bar {
     -webkit-text-size-adjust: 100%;
     font-size: 15px;
@@ -190,27 +197,31 @@ h1 {
     text-align: center;
     padding: 0.5rem 1rem;
     color: snow;
-    background-color: #EC4242;        
+    background-color: #EC4242;
 }
+
 .skills {
-color: snow;
--webkit-text-size-adjust: 100%;
-font-size: 15px;
-font-family: "Lato", sans-serif;
-background-color: #201E1E;
-line-height: 1.8;
-box-sizing: inherit;
-margin-left: auto;
-margin-right: auto;
-max-width: 55rem;
-padding: 1rem 2rem;
-margin-bottom: 2rem;
-padding-bottom: 3rem;
-border-radius: 1rem;
-border: 0.5rem solid #EC4242;
+    color: snow;
+    -webkit-text-size-adjust: 100%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    background-color: #201E1E;
+    line-height: 1.8;
+    box-sizing: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55rem;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3rem;
+    border-radius: 1rem;
+    border: 0.5rem solid #EC4242;
 }
+
 .black--bg {
-padding-top: 5rem;
-padding-bottom: 1rem;
-background-color: #201E1E;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    background-color: #201E1E;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
