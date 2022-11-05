@@ -1,6 +1,5 @@
 package com.hestia.app.project;
 
-import com.hestia.app.user.User;
 import com.hestia.app.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

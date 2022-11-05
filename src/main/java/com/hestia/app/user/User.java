@@ -1,7 +1,5 @@
 package com.hestia.app.user;
 
-import com.hestia.app.project.Project;
-
 import javax.persistence.*;
 
 @Entity
