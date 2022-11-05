@@ -4,6 +4,7 @@ import com.hestia.app.project.ProjectRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
 
@@ -20,18 +21,22 @@ public class Pages {
     @GetMapping("/dashboard")
     public String dashboard(Model model, HttpSession session) {
 
-        model.addAttribute("projects", projectRepository.findAll());
-        return "dashboard";
+        if(session.getAttribute("user") == null){return "redirect:/login";}
 
+        model.addAttribute("projects", projectRepository.findAll());
+
+        return "dashboard";
     }
 
     @GetMapping("/login")
-    public String login() {
+    public String login(HttpSession session) {
+        if(session.getAttribute("user")!= null){return "redirect:/";}
         return "login";
     }
 
     @GetMapping("/register")
-    public String register() {
+    public String register(HttpSession session) {
+        if(session.getAttribute("user")!= null){return "redirect:/";}
         return "register";
     }
 
