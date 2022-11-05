@@ -1,0 +1,10 @@
+ body {
+    background-color: #313131;
+}
+
+.border--red {
+    border: 0.5rem solid #a40909;
+    border-radius: 1rem;
+    margin: 2rem;
+    min-height: 30rem;
+}

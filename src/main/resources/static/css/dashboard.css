@@ -1,17 +1,5 @@
-html, body {
-    background-color: #313131;
-
-}
-
 .post {
     display: flex;
-}
-
-.post--border {
-    border: 0.5rem solid #B65518;
-    border-radius: 1rem;
-    margin: 2rem;
-    min-height: 30rem;
 }
 
 .post__visual {
