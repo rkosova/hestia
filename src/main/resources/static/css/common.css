@@ -2,6 +2,7 @@ body {
     background-color: #201E1E;
      color: snow;
      margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 .border--red {
@@ -11,12 +12,10 @@ body {
 }
 
 .tag {
-    padding: 0.5rem;
-    border: solid #bab9b8 0.1rem;
-    border-radius: 0.5rem;
-    background-color: #bab9b8;
-    margin: 0.5rem;
-    color: black;
+    padding: 0.4rem;
+    margin: 0.4rem;
+    color: #201E1E;
+    background-color: #EC4242;
 }
 
 .pointer:hover {
