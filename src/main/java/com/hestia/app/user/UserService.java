@@ -29,15 +29,16 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void addUser(User user)throws Exception {
+    public String addUser(User user)throws Exception {
         String password = user.getPassword();
 
         user.setPassword(bcrypt.encoder().encode(password));
 
         if(user.getEmail() == null || user.getPassword() == null){
-            throw new Exception("Email or Password not provided");
+            return "/register";
         }
         userRepository.save(user);
+        return "/login";
     }
     public String login(User user){
         Optional<User> authorized = userRepository.findAllByEmail(user.getEmail());

@@ -27,8 +27,9 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public void registerUser(@ModelAttribute User user)throws Exception {
-        userService.addUser(user);
+    public RedirectView registerUser(@ModelAttribute User user)throws Exception {
+        String option = userService.addUser(user);
+        return new RedirectView(option);
     }
     @PostMapping("/login")
     public RedirectView login(@ModelAttribute User user){
