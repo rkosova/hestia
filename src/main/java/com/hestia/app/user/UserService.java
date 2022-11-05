@@ -3,6 +3,7 @@ package com.hestia.app.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,9 +32,11 @@ public class UserService {
         }
         userRepository.save(user);
     }
-    public String login(User user){
+    public String login(User user, HttpSession session){
         Optional<User> authorized = userRepository.findAllByEmailAndPassword(user.getEmail(), user.getPassword());
         if(!authorized.isEmpty()){
+            session.setAttribute("user",user.getEmail());
+            session.setAttribute("id",user.getId());
             return "/dashboard";
         }
         return "/login";

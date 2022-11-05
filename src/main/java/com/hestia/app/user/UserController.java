@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -31,8 +32,8 @@ public class UserController {
         userService.addUser(user);
     }
     @PostMapping("/login")
-    public RedirectView login(@ModelAttribute User user){
-        String option = userService.login(user);
+    public RedirectView login(@ModelAttribute User user, HttpSession session){
+        String option = userService.login(user, session);
         return new RedirectView(option);
     }
     @DeleteMapping(path = "{userId}")
