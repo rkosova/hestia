@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href="@{/css/loginRegister.css}" rel="stylesheet"></link>
+  <link th:href="@{/css/common.css}" rel="stylesheet"></link>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+<div class="wrapper">
+  <div class="login">
+
+
+    <span>EMAIL:</span>
+    <label>
+      <span>[</span>
+      <input class="login__input" type="email" required>
+      <span>];</span>
+    </label>
+
+
+    <span>PASSWORD:</span>
+    <label>
+      <span>[</span>
+      <input class="login__input" type="password" required>
+      <span>];</span>
+    </label>
+
+    <div class="buttons">
+      <input class="login__submit pointer" type="submit" value="REGISTER">
+      <button class="login__submit pointer">LOGIN</button>
+      <button class="login__submit pointer">HOME</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
