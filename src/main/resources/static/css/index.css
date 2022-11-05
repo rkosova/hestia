@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <title>Hestia</title>
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-    <style type="text/css">
-body{
-    margin:0rem;
+body {
+    margin: 0rem;
 }
-html,body{
-    font-family:"Montserrat",sans-serif;
-    font-size:15px;
-    line-height:1.5;
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
 }
-html{
-    overflow-x:hidden;
+
+html {
+    overflow-x: hidden;
 }
 
 .header__container {
     -webkit-text-size-adjust: 100%;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
     box-sizing: inherit;
@@ -29,6 +26,7 @@ html{
     color: snow;
     background-color: #201E1E;
 }
+
 .header__img {
     display: flex;
     justify-content: center;
@@ -36,17 +34,20 @@ html{
     padding: 2rem;
     max-height: 25rem;
 }
+
 .header__div {
     text-align: center;
 }
+
 h4 {
     text-align: center;
     box-sizing: inherit;
     font-size: 20px;
-    font-family: "Montserrat",sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     margin: 1rem 0;
 }
+
 h1 {
     text-align: center;
     box-sizing: inherit;
@@ -55,14 +56,18 @@ h1 {
     position: relative;
     font-size: 48px;
 }
+
 .button__div {
     font-size: 15px;
-    color: #B65518;
+    border: solid #EC4242 0.2rem;
+    border-style: dashed;
+    color: #EC4242;
     text-align: center;
     box-sizing: inherit;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+
 .button__header {
     font-family: "Lora";
     margin: 0rem;
@@ -74,58 +79,64 @@ h1 {
     padding: 0.8rem 1.8rem;
     overflow: hidden;
     font-size: 24px;
-    color: #fda118;
+    color: #EC4242;
     background-color: #201E1E;
     font-weight: 900;
 }
+
 .post--border--small {
-    border: 0.2rem solid #fda118;
+    border: 0.2rem dashed #EC4242;
+    border-radius: 1rem;
+}
+
+.post--border--medium {
+    border: 0.5rem dashed #EC4242;
     border-radius: 1rem;
 }
 .row {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    justify-content: center;
+    align-items: center;
     box-sizing: inherit;
     padding: 0rem 1rem;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+.section__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    }
+
 .card {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
     text-align: center;
     box-sizing: inherit;
-    float: left;
-    width: 33.3333%;
-    padding: 0rem 2rem;
+    width: 22%;
+    margin: 1rem;
+    padding: 0rem 1rem;
 }
+
 .card__third {
+    background-color: #201E1E;
+    color: snow;
     text-size-adjust: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    text-align: center !important;
+    text-align: center;
     box-sizing: inherit;
     padding: 0rem 1rem;
     min-height: 20rem;
 }
-.aboutus__container {
-    font-size: 1rem;
-    font-family: "Montserrat", sans-serif;
-    color: #313131;
-    line-height: 1.8;
-    box-sizing: inherit;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 0rem 1rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
+
 .customers__text {
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
@@ -140,20 +151,66 @@ h1 {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-</style>
-</head>
-<body>
-<header class="container header__container">
-    <div class="header__div">
-    <h4>COMMUNITY FOR DEVELOPERS AND FREELANCERS</h4>
-    <div class="header__img">
-        <img src="C:\Users\Dell Latitude 7390\Documents\GitHub\Guitar\hestia_logo.svg" alt="hestia logo">
-    </div>
-    <h1>HESTIA</h1>
-      <div class="button__div">
-        <button class="button__header post--border--small">Discover more about our policies</button>
-      </div>
-    </div>
-</header>
-</body>
-</html>
+.customers__main {
+    font-size: 2rem;
+}
+.triangle {
+    margin: auto;
+    width: 0; 
+    height: 0; 
+    border-left: 40rem solid transparent;
+    border-right: 40rem solid transparent;
+    border-top: 10rem solid #201E1E;
+    margin-bottom: 5rem;
+}
+.group__logo {
+    -webkit-text-size-adjust: 100%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    color: snow;
+    line-height: 1.8;
+    box-sizing: inherit;
+    letter-spacing: 10px;   
+}
+.group {
+    -webkit-text-size-adjust: 100%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+    box-sizing: inherit;
+    color: snow;
+    background-color: snow;
+}
+.group__bar {
+    -webkit-text-size-adjust: 100%;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+    box-sizing: inherit;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    color: snow;
+    background-color: #EC4242;        
+}
+.skills {
+color: snow;
+-webkit-text-size-adjust: 100%;
+font-size: 15px;
+font-family: "Lato", sans-serif;
+background-color: #201E1E;
+line-height: 1.8;
+box-sizing: inherit;
+margin-left: auto;
+margin-right: auto;
+max-width: 55rem;
+padding: 1rem 2rem;
+margin-bottom: 2rem;
+padding-bottom: 3rem;
+border-radius: 1rem;
+border: 0.5rem solid #EC4242;
+}
+.black--bg {
+padding-top: 5rem;
+padding-bottom: 1rem;
+background-color: #201E1E;
+}
