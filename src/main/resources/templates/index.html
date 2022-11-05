@@ -10,9 +10,11 @@
 <body>
     <header class="container header__container">
         <div class="header__div">
-            <h4>COMMUNITY FOR DEVELOPERS AND FREELANCERS</h4>
+            <div class="header__text">
+                <h4>COMMUNITY FOR DEVELOPERS AND FREELANCERS</h4>
+            </div>
             <div class="header__img">
-                <img src="C:/Users/Dell Latitude 7390/Documents/GitHub/Guitar/hestia_logo.svg" alt="hestia logo">
+                <div class="pointer logo" th:include="hestia_logo"></div>
             </div>
             <h1>HESTIA</h1>
             <div class="button__div">
@@ -20,7 +22,9 @@
             </div>
         </div>
     </header>
-    <div class="triangle"></div>
+    <div class="scaleable">
+        <div class="triangle"></div>
+    </div>
     <div class="row">
         <h3 class="customers__main">What do we provide to our developers?</h3>
     </div>
@@ -81,4 +85,5 @@
         </div>
     </div>
 </body>
+
 </html>
