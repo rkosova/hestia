@@ -7,14 +7,13 @@
     border: 0.5rem solid #EC4242;
     border-radius: 1rem;
     margin: 2rem;
-    min-height: 30rem;
 }
 
 .tag {
     padding: 0.5rem;
-    border: solid gray 0.1rem;
+    border: solid #bab9b8 0.1rem;
     border-radius: 0.5rem;
-    background-color: gray;
+    background-color: #bab9b8;
     margin: 0.5rem;
     color: black;
 }
