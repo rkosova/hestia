@@ -3,6 +3,7 @@ package com.hestia.app.project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
@@ -21,8 +22,8 @@ public class ProjectController {
     }
 
     @PostMapping("/create")
-    public void addProjects(@RequestBody Project project) {
-        projectService.addProject(project, 1L); // use Session ID
+    public void addProjects(@RequestBody Project project, HttpSession session) {
+        projectService.addProject(project, (String) session.getAttribute("user"));
     }
 
     @DeleteMapping(path = "{projectId}")

@@ -21,8 +21,8 @@ public class ProjectService {
         return projectRepository.findAll();
     }
 
-    public void addProject(Project project, Long userId) {
-        project.setUser(userRepository.findById(userId).get());
+    public void addProject(Project project, String email) {
+        project.setUser(userRepository.findAllByEmail(email).get());
         projectRepository.save(project);
     }
 
