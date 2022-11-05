@@ -10,7 +10,7 @@
 <div>
     <h1>PROJECTS</h1>
 </div>
-<div th:each="description: ${descriptions}">
+<div th:each="project, iStat: ${projects}" th:id="${iStat.count}">
     <div th:replace="post"></div>
 </div>
 

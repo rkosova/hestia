@@ -6,6 +6,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -40,11 +41,13 @@ public class UserService {
         userRepository.save(user);
         return "/login";
     }
-    public String login(User user){
+    public String login(User user, HttpSession session){
         Optional<User> authorized = userRepository.findAllByEmail(user.getEmail());
         String password = authorized.get().getPassword();
         boolean isPasswordMatch = bcrypt.encoder().matches(user.getPassword(), password);
         if(!authorized.isEmpty() && isPasswordMatch){
+            session.setAttribute("user",user.getEmail());
+            session.setAttribute("id",user.getId());
             return "/dashboard";
         }
         return "/login";

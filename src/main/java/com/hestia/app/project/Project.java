@@ -23,7 +23,7 @@ public class Project {
     private String description;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "teacherId", referencedColumnName = "id")
+    @JoinColumn(name = "userId", referencedColumnName = "id")
     private User user;
 
     public Project(Long id, String name, String description, User user) {
