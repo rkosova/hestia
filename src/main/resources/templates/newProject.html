@@ -10,6 +10,8 @@
 <div class="wrapper">
   <form class="form" method="post" th:action="@{/api/v1/projects/create}">
 
+    <input type="hidden" id="userId" name="userId" th:value="${id}">
+
     <span>PROJECT NAME:</span>
     <label>
       <span>[</span>
@@ -25,13 +27,13 @@
     </label>
 
     <span>SKILL</span>
-    <labe>
+    <label>
 
       <select class="form__input" name="skill" id="skill">
         <option class="form__input" th:each="skill :${skills}" th:value="${skill.getId()}" th:text="${skill.getName()}"></option>
       </select>
 
-    </labe>
+    </label>
 
 
     <div class="buttons">

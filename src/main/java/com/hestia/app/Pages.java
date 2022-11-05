@@ -2,21 +2,26 @@ package com.hestia.app;
 
 import com.hestia.app.project.ProjectRepository;
 import com.hestia.app.skill.SkillRepository;
+import com.hestia.app.user.User;
+import com.hestia.app.user.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
+import java.util.Optional;
 
 @Controller
 public class Pages {
 
     private final ProjectRepository projectRepository;
     private final SkillRepository skillRepository;
+    private final UserRepository userRepository;
 
-    public Pages(ProjectRepository projectRepository, SkillRepository skillRepository) {
+    public Pages(ProjectRepository projectRepository, SkillRepository skillRepository, UserRepository userRepository) {
         this.projectRepository = projectRepository;
         this.skillRepository = skillRepository;
+        this.userRepository = userRepository;
     }
 
 
@@ -51,6 +56,11 @@ public class Pages {
 
         if(session.getAttribute("user") == null){return "redirect:/login";}
         model.addAttribute("skills", skillRepository.findAll());
+        Optional<User> user = userRepository.findAllByEmail((String)session.getAttribute("user"));
+        if (user.isPresent()) {
+            model.addAttribute("id", user.get().getId());
+        }
+
         return "newProject";
     }
 
