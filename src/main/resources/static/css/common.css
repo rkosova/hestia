@@ -1,10 +1,20 @@
  body {
-    background-color: #313131;
+    background-color: #201E1E;
+     color: snow;
 }
 
 .border--red {
-    border: 0.5rem solid #a40909;
+    border: 0.5rem solid #EC4242;
     border-radius: 1rem;
     margin: 2rem;
     min-height: 30rem;
+}
+
+.tag {
+    padding: 0.5rem;
+    border: solid gray 0.1rem;
+    border-radius: 0.5rem;
+    background-color: gray;
+    margin: 0.5rem;
+    color: black;
 }
