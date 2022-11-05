@@ -9,7 +9,7 @@ import java.util.List;
 @Configuration
 public class SkillConfigure {
     @Bean
-    CommandLineRunner commandLineRunner(SkillRepository repository) {
+    CommandLineRunner skillMaker(SkillRepository repository) {
         return args -> {
             Skill java = new Skill(
                     "Java"
@@ -69,7 +69,8 @@ public class SkillConfigure {
                     "Go"
             );
 
-            repository.saveAll(List.of());
+            repository.saveAll(List.of(java, python, kotlin, php, htmlcss, react, reactNative, NET, Swift, Ruby, C,
+                    Cplusplus, Csharp, JS, SQL, NoSQL, Rust, Perl, Go));
         };
     }
 }
