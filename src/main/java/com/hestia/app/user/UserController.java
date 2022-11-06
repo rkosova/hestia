@@ -44,4 +44,10 @@ public class UserController {
     public void deleteUser(@PathVariable("userId") Long userId) {
         userService.deleteUser(userId);
     }
+
+    @GetMapping("/logout")
+    public RedirectView logout(HttpSession session) {
+        String option = userService.logout(session);
+        return new RedirectView(option);
+    }
 }

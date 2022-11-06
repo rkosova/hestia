@@ -51,6 +51,12 @@ public class UserService {
         }
         return "/login";
     }
+
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "/";
+    }
+
     public void deleteUser(Long userId) {
         if (!userRepository.existsById(userId)) {
             throw new IllegalStateException("User with id " + userId + "does not exist");

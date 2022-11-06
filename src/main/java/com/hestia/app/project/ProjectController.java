@@ -3,6 +3,7 @@ package com.hestia.app.project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -23,8 +24,9 @@ public class ProjectController {
     }
 
     @PostMapping("/create")
-    public void addProjects(@ModelAttribute Project project, HttpSession session) {
+    public RedirectView addProjects(@ModelAttribute Project project, HttpSession session) {
         projectService.addProject(project, (String) session.getAttribute("user"));
+        return new RedirectView("/dashboard");
     }
 
     @DeleteMapping(path = "{projectId}")
