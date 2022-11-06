@@ -2,6 +2,7 @@ package com.hestia.app.mail;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 
 @RestController
@@ -11,11 +12,10 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    @PostMapping ("/sendMail")
-    public String sendMail(@ModelAttribute EmailDetails details)
+    @GetMapping("/sendMail")
+    public RedirectView sendMail(EmailDetails details)
     {
-
         emailService.sendSimpleMail(details);
-        return "";
+        return new RedirectView("/dashboard");
     }
 }
