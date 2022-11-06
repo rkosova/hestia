@@ -10,6 +10,8 @@
 <body>
 <div class="red title">
     <h1>PROJECTS</h1>
+    <span class="link pointer" onclick="location.href='/api/v1/user/logout'">LOG OUT</span>
+    <span class="link pointer" onclick="location.href='/new_project'">NEW PROJECT</span>
 </div>
 <div th:each="project: ${projects}" >
     <div th:id="${project.getId()}" th:include="post"></div>

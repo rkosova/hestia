@@ -44,3 +44,16 @@
 .visual__skills {
     display: flex;
 }
+
+.link {
+    background-color: #201E1E;
+    border: solid #EC4242 0.1rem ;
+    color: #EC4242;
+    padding: 0.1rem;
+    margin-right: 1rem;
+}
+
+.link:hover {
+    color: #201E1E;
+    background-color: #EC4242;
+}

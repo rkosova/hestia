@@ -1,6 +1,6 @@
 package com.hestia.app;
 
-import com.google.gson.Gson;
+
 import com.hestia.app.mail.EmailController;
 import com.hestia.app.mail.EmailDetails;
 import com.hestia.app.mail.EmailServiceImpl;
@@ -42,13 +42,13 @@ public class Pages {
 
     @GetMapping("/login")
     public String login(HttpSession session) {
-        if(session.getAttribute("user")!= null){return "redirect:/";}
+        if(session.getAttribute("user")!= null){return "redirect:/dashboard";}
         return "login";
     }
 
     @GetMapping("/register")
     public String register(HttpSession session) {
-        if(session.getAttribute("user")!= null){return "redirect:/";}
+        if(session.getAttribute("user")!= null){return "redirect:/dashboard";}
         return "register";
     }
 
