@@ -1,9 +1,6 @@
 package com.hestia.app;
 
 import com.hestia.app.project.ProjectRepository;
-import com.hestia.app.skill.SkillRepository;
-import com.hestia.app.user.User;
-import com.hestia.app.user.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,6 +59,10 @@ public class Pages {
         }
 
         return "newProject";
+    }
+    @GetMapping("/sendMail")
+    public String sendMail(){
+        return "mail";
     }
 
 }

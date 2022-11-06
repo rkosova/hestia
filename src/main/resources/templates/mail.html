@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href="@{/css/loginRegister.css}" rel="stylesheet">
+  <link th:href="@{/css/common.css}" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+<div class="wrapper">
+  <form class="login" method="post" th:action="@{/api/v1/mail/sendMail}">
+    <span>email</span>
+    <label>
+      <span>[</span>
+      <input class="login__input" type="email" name="recipient" required>
+      <span>];</span>
+    </label>
+
+
+    <span>Subj</span>
+    <label>
+      <span>[</span>
+      <input class="login__input" type="text" name="subject" required>
+      <span>];</span>
+    </label>
+
+    <span>msgBody</span>
+    <label>
+      <span>[</span>
+      <input class="login__input" type="text" name="msgBody" required>
+      <span>];</span>
+    </label>
+
+    <div class="buttons">
+      <input class="login__submit pointer" type="submit" value="SENT">
+    </div>
+  </form>
+
+</div>
+</body>
+</html>
