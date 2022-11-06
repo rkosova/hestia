@@ -3,6 +3,7 @@
 <head>
     <link th:href="@{/css/dashboard.css}" rel="stylesheet"></link>
     <link th:href="@{/css/common.css}" rel="stylesheet"></link>
+    <script th:src="@{/js/main.js}"></script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -11,7 +12,7 @@
     <h1>PROJECTS</h1>
 </div>
 <div th:each="project: ${projects}" >
-    <div th:replace="post"></div>
+    <div th:id="${project.getId()}" th:include="post"></div>
 </div>
 
 </body>
