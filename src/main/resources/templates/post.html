@@ -1,19 +1,19 @@
-<div class="post">
-    <div class="post__visual border--red post__size_1">
+<div class="post red">
+    <div class="post__visual border--red--dash post__size_1">
         <svg xmlns="http://www.w3.org/2000/svg" width="8rem" height="10rem" viewBox="0 0 256 346" preserveAspectRatio="xMinYMin meet" id="svgcontent" x="211.5" y="173"><defs></defs><g style="pointer-events:all"><title style="pointer-events:inherit">Layer 1</title><path d="M81.554,267.473 S68.356,275.148 90.947,277.745 C118.316,280.867 132.303,280.42 162.464,274.711 C162.464,274.711 170.394,279.683 181.467,283.99 C113.856,312.967 28.448,282.311 81.554,267.473 M73.292,229.659 S58.489,240.617 81.097,242.955 C110.333,245.971 133.421,246.218 173.373,238.525 C173.373,238.525 178.899,244.127 187.588,247.191 C105.841,271.095 14.79,249.076 73.292,229.659 " fill="#bab9b8" id="svg_1"></path><path d="M143.942,164.515 C160.602,183.695 139.565,200.955 139.565,200.955 S181.866,179.118 162.439,151.772 C144.295,126.272 130.38,113.6 205.707,69.914 C205.707,69.914 87.469,99.444 143.942,164.514 " fill="#bab9b8" id="svg_2"></path><path d="M233.364,295.442S243.131,303.489 222.607,309.715C183.581,321.538 60.175,325.108 25.893,310.186C13.57,304.826 36.68,297.386 43.949,295.824C51.53,294.18 55.863,294.487 55.863,294.487C42.158,284.832 -32.72,313.444 17.829,321.637C155.682,343.993 269.121,311.571 233.364,295.442M88.9,190.48S26.129,205.39 66.672,210.803C83.79,213.095 117.915,212.577 149.702,209.913C175.68,207.723 201.765,203.063 201.765,203.063S192.605,206.986 185.978,211.511C122.234,228.276 -0.908,220.477 34.543,203.328C64.524,188.836 88.901,190.48 88.901,190.48M201.506,253.422C266.306,219.75 236.345,187.392 215.433,191.752C210.307,192.818 208.022,193.742 208.022,193.742S209.925,190.762 213.559,189.472C254.929,174.927 286.746,232.369 200.204,255.119C200.204,255.12 201.207,254.224 201.506,253.422" fill="#bab9b8" id="svg_3"></path><path d="M162.439,0.371S198.326,36.271 128.402,91.472C72.331,135.754 115.616,161.002 128.379,189.849C95.649,160.319 71.629,134.323 87.744,110.129C111.395,74.612 176.918,57.393 162.439,0.37" fill="#bab9b8" id="svg_4"></path><path d="M95.268,343.665 C157.467,347.647 252.98,341.456 255.242,312.025 C255.242,312.025 250.894,323.183 203.838,332.043 C150.75,342.033 85.274,340.867 46.439,334.464 C46.44,334.464 54.389,341.044 95.269,343.665 " fill="#bab9b8" id="svg_5"></path></g></svg>
         <h2 class="visual__name" th:text="${project.getName()}"></h2>
         <div class="visual__skills">
-            <span class="skills__skill tag">Java</span>
-            <span class="skills__skill tag">Python</span>
-            <span class="skills__skill tag">Kotlin</span>
+            <span class="skills__skill tag">JAVA</span>
+            <span class="skills__skill tag">PYTHON</span>
+            <span class="skills__skill tag">KOTLIN</span>
         </div>
         <div class="visual__choice">
             <div class="pointer logo" th:include="hestia_logo"></div>
-            <div class="pointer logo" th:include="hestia_logo"></div>
+            <div class="pointer logo" th:include="closeX"></div>
         </div>
     </div>
-    <div class="post__description border--red post__size_2">
-        <h3>Desciption</h3>
+    <div class="post__description border--red--dash post__size_2">
+        <h3>DESCRIPTION:</h3>
         <span th:text="${project.getDescription()}"></span>
     </div>
 </div>

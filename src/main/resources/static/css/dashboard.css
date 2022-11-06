@@ -2,6 +2,14 @@
     display: flex;
 }
 
+.red {
+    color: #EC4242;
+}
+
+.title {
+    margin-left: 2rem;
+}
+
 .post__visual {
     grid-area: one;
     display: flex;
@@ -9,6 +17,12 @@
     align-items: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.border--red--dash {
+    border: solid #EC4242 0.4rem;
+    border-style: dashed;
+    margin: 2rem;
 }
 
 .post__description {
