@@ -1,5 +1,7 @@
 package com.hestia.app;
 
+import com.google.gson.Gson;
+import com.hestia.app.mail.EmailController;
 import com.hestia.app.mail.EmailDetails;
 import com.hestia.app.mail.EmailServiceImpl;
 import com.hestia.app.mail.MailDefault;
@@ -19,7 +21,6 @@ import java.util.Optional;
 
 @Controller
 public class Pages {
-
     private final ProjectRepository projectRepository;
     private final SkillRepository skillRepository;
     private final UserRepository userRepository;
@@ -81,11 +82,9 @@ public class Pages {
             EmailDetails details = new EmailDetails(email,
                     MailDefault.defaultBody((String)session.getAttribute("user")),
                     "Project companion");
-
-
-            EmailServiceImpl emailService = new EmailServiceImpl();
-            emailService.sendSimpleMail(details);
+            return "redirect:http://localhost:8080/api/v1/mail/sendMail?recipient="+email+"&subject=Project companion"+"&msgBody="+MailDefault.defaultBody((String)session.getAttribute("user"));
         }
+
         return "dashboard";
     }
 
