@@ -1,10 +1,18 @@
 package com.hestia.app;
 
+import com.hestia.app.mail.EmailDetails;
+import com.hestia.app.mail.EmailServiceImpl;
+import com.hestia.app.mail.MailDefault;
 import com.hestia.app.project.ProjectRepository;
+import com.hestia.app.skill.SkillRepository;
+import com.hestia.app.user.User;
+import com.hestia.app.user.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Optional;
 
@@ -63,6 +71,17 @@ public class Pages {
     @GetMapping("/sendMail")
     public String sendMail(){
         return "mail";
+    }
+
+    @GetMapping("/mail")
+    public void mail(HttpSession session, @RequestBody String receiver) {
+        if(session.getAttribute("user") != null){
+            EmailDetails em = new EmailDetails(receiver,
+                    MailDefault.defaultBody((String)session.getAttribute("user")),
+                    "Project companion");
+            EmailServiceImpl emailService = new EmailServiceImpl();
+            emailService.sendSimpleMail(em);
+        }
     }
 
 }

@@ -21,7 +21,7 @@ public class EmailServiceImpl implements EmailService {
     @Value("${spring.mail.username}") private String sender;
 
 
-    public String sendSimpleMail(EmailDetails details) {
+    public void sendSimpleMail(EmailDetails details) {
 
             SimpleMailMessage mailMessage
                     = new SimpleMailMessage();
@@ -31,7 +31,7 @@ public class EmailServiceImpl implements EmailService {
             mailMessage.setSubject(details.getSubject());
 
             javaMailSender.send(mailMessage);
-            return "Mail Sent Successfully...";
+
 
     }
 }
