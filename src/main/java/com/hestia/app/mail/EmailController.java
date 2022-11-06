@@ -14,6 +14,7 @@ public class EmailController {
     @PostMapping ("/sendMail")
     public String sendMail(@ModelAttribute EmailDetails details)
     {
+
         emailService.sendSimpleMail(details);
         return "";
     }
