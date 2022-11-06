@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link th:href="@{/css/form.css}" rel="stylesheet">
+  <link th:href="@{/css/common.css}" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>NEW PROJECT</title>
+</head>
+<body>
+<div class="wrapper">
+  <form class="form" method="post" th:action="@{/api/v1/projects/create}">
+
+    <input type="hidden" id="userId" name="userId" th:value="${id}">
+
+    <span>PROJECT NAME:</span>
+    <label>
+      <span>[</span>
+      <input class="form__input" type="text" name="name" required>
+      <span>];</span>
+    </label>
+
+    <span>DESCRIPTION:</span>
+    <label>
+      <span>[</span>
+      <textarea class="form__input" rows="5" name="description" required></textarea>
+      <span>];</span>
+    </label>
+
+    <span>SKILL</span>
+    <label>
+
+      <select class="form__input" name="skill" id="skill">
+        <option class="form__input" th:each="skill :${skills}" th:value="${skill.getId()}" th:text="${skill.getName()}"></option>
+      </select>
+
+    </label>
+
+
+    <div class="buttons">
+      <input class="form__submit pointer" type="submit" value="CREATE">
+      <button class="form__submit pointer" onclick="location.href='/dashboard'">CANCEL</button>
+    </div>
+
+  </form>
+</div>
+</body>
+</html>

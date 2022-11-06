@@ -47,7 +47,6 @@ public class UserService {
         boolean isPasswordMatch = bcrypt.encoder().matches(user.getPassword(), password);
         if(!authorized.isEmpty() && isPasswordMatch){
             session.setAttribute("user",user.getEmail());
-            session.setAttribute("id",user.getId());
             return "/dashboard";
         }
         return "/login";

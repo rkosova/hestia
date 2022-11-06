@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <link th:href="@{/css/loginRegister.css}" rel="stylesheet">
+  <link th:href="@{/css/form.css}" rel="stylesheet">
   <link th:href="@{/css/common.css}" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Register</title>
 </head>
 <body>
 <div class="wrapper">
-  <form class="login" method="post" th:action="@{/api/v1/user/register}">
+  <form class="form" method="post" th:action="@{/api/v1/user/register}">
 
     <span>FIRST NAME:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="text" name="name" required>
+      <input class="form__input" type="text" name="name" required>
       <span>];</span>
     </label>
 
     <span>LAST NAME:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="text" name="l_name"required>
+      <input class="form__input" type="text" name="l_name" required>
       <span>];</span>
     </label>
 
     <span>EMAIL:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="email" name="email" required>
+      <input class="form__input" type="email" name="email" required>
       <span>];</span>
     </label>
 
@@ -35,20 +35,14 @@
     <span>PASSWORD:</span>
     <label>
       <span>[</span>
-      <input class="login__input" type="password" name="password" required>
-      <span>];</span>
-    </label>
-    <span>CONFIRM PASSWORD:</span>
-    <label>
-      <span>[</span>
-      <input class="login__input" type="password" required>
+      <input class="form__input" type="password" name="password" required>
       <span>];</span>
     </label>
 
     <div class="buttons">
-      <input class="login__submit pointer" type="submit" value="REGISTER">
-      <button class="login__submit pointer">LOGIN</button>
-      <button class="login__submit pointer">HOME</button>
+      <input class="form__submit pointer" type="submit" value="REGISTER">
+      <button class="form__submit pointer" onclick="location.href='/login'">LOGIN</button>
+      <button class="form__submit pointer" onclick="location.href='/'">HOME</button>
     </div>
 
   </form>
